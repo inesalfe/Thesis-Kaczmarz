@@ -1,0 +1,147 @@
+#include "aux_func.h"
+#include <iostream>
+#include <fstream>
+#include <math.h>
+#include <omp.h>
+#include <random>
+using namespace std;
+
+int main (int argc, char *argv[]) {
+
+	if(argc != 7) {
+		cout << "Incorrect number of arguments: Corret usage is ";
+		cout << "'./bin/RKA_error.exe <data_set> <M> <N> <threads> <it_max> <step_save>'" << endl;
+		exit(1);
+	}
+
+	double* b;
+	double* x;
+	double* x_sol;
+	double** A;
+
+	int M = atoi(argv[2]);
+	int N = atoi(argv[3]);
+	int threads = atoi(argv[4]);
+	int it_max = atoi(argv[5]);
+	int step_save = atoi(argv[6]);
+
+	string matrix_type = argv[1];
+	string filename_A;
+	string filename_b;
+	string filename_x;
+	if (matrix_type.compare("dense") == 0) {
+		filename_A = "../data/dense/A_" + to_string(M) + "_" + to_string(N) + ".bin";
+		filename_b = "../data/dense/b_" + to_string(M) + "_" + to_string(N) + ".bin";
+		filename_x = "../data/dense/x_" + to_string(M) + "_" + to_string(N) + ".bin";
+	}
+	else if (matrix_type.compare("dense_rand") == 0) {
+		filename_A = "../data/dense_rand/A_" + to_string(M) + "_" + to_string(N) + ".bin";
+		filename_b = "../data/dense_rand/b_" + to_string(M) + "_" + to_string(N) + ".bin";
+		filename_x = "../data/dense_rand/x_" + to_string(M) + "_" + to_string(N) + ".bin";
+	}
+	else if (matrix_type.compare("dense_norm") == 0) {
+		filename_A = "../data/dense_norm/A_" + to_string(M) + "_" + to_string(N) + ".bin";
+		filename_b = "../data/dense_norm/b_" + to_string(M) + "_" + to_string(N) + ".bin";
+		filename_x = "../data/dense_norm/x_" + to_string(M) + "_" + to_string(N) + ".bin";
+	}
+	else {
+		cout << "Incorrect number of arguments: Corret usage is ";
+		cout << "'./bin/RKA_error.exe <data_set> <M> <N> <threads> <it_max> <step_save>'" << endl;
+		exit(1);
+	}
+
+	double start_total = omp_get_wtime();
+
+	importDenseSystemBIN(M, N, filename_A, filename_b, filename_x, A, b, x);
+
+	vector<double> sqrNorm_line(M);
+	for (int i = 0; i < M; i++) {
+		sqrNorm_line[i] = sqrNorm(A[i], N);
+		if (sqrNorm_line[i] == 0) {
+			cout << "Invalid input: matrix with zero norm line" << endl;
+			delete[] A[0];
+			delete[] A;
+			delete[] b;
+			delete[] x;
+			exit(1);
+		}
+	}
+
+	default_random_engine generator;
+	discrete_distribution<> dist(sqrNorm_line.begin(), sqrNorm_line.end());
+
+	double* x_k = new double[N];
+	double* x_prev = new double[N];
+
+	double scale;
+	int line;
+	unsigned long it = 0;
+
+	vector<double> error;
+	vector<double> res;
+	vector<int> error_it;
+	vector<int> res_it;
+	double* res_vec = new double[M];
+	double sqr_norm_res;
+
+	generator.seed(1);
+	for (int i = 0; i < N; i++) {
+		x_k[i] = 0;
+	}
+	error[it] = sqrNormDiff(x, x_k, N);
+	while(it < it_max) {
+		it++;
+		for (int i = 0; i < N; i++) {
+			x_prev[i] = x_k[i];
+			x_k[i] = 0;
+		}
+		for (int i = 0; i < threads; i++) {
+			line = dist(generator);
+			scale = (b[line]-dotProduct(A[line], x_prev, N))/sqrNorm_line[line];
+			for (int j = 0; j < N; j++) {
+				x_k[j] += (x_prev[j] + scale * A[line][j])/threads;
+			}
+		}
+		if (it%step_save == 0) {
+			error_it.push_back(it);
+			error.push_back(sqrt(sqrNormDiff(x_k, x, N)));
+			for (int i = 0; i < M; i++) {
+				res_vec[i] = b[i] - dotProduct(A[i], x_k, N);
+			}
+			sqr_norm_res = 0;
+			for (int i = 0; i < M; i++)
+				sqr_norm_res += res_vec[i]*res_vec[i];
+			res_it.push_back(it);
+			res.push_back(sqrt(sqr_norm_res));
+		}
+	}
+
+	string filename_error = "errors/omp/RKA_error_" + to_string(M) + "_" + to_string(N) + "_" + to_string(threads) + ".txt";
+	string filename_res = "errors/omp/RKA_res_" + to_string(M) + "_" + to_string(N) + "_" + to_string(threads) + ".txt";
+
+	ofstream file_error(filename_error);
+	ofstream file_res(filename_res);
+	if (file_error.is_open() && file_res.is_open()) {
+		for (int i = 0; i < error.size(); i++) {
+			file_error << error_it[i] << " " << error[i] << endl;
+			file_res << res_it[i] << " " << res[i] << endl;
+		}
+		file_error.close();
+		file_res.close();
+	}
+	else {
+		cout << "ERROR: Invalid input file for error or residual output file." << endl;
+		exit(1);
+	}
+
+	delete[] x_k;
+	delete[] x_prev;
+	delete[] res_vec;
+
+	delete[] A[0];
+	delete[] A;
+	delete[] b;
+	delete[] x;
+
+	return 0;
+}

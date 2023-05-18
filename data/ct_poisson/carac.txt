@@ -1,0 +1,32 @@
+N_pixels: 128
+Angles: 120
+M (pre deletion): 21720
+N (pre deletion): 16384
+M: 19558
+N: 16384
+Density: 0.007808
+Residual: 0.000000
+N_pixels: 128
+Angles: 120
+M (pre deletion): 21720
+N (pre deletion): 16384
+M: 19558
+N: 16384
+Density: 0.007808
+Residual: 0.000000
+N_pixels: 128
+Angles: 120
+M (pre deletion): 21720
+N (pre deletion): 16384
+M: 19558
+N: 16384
+Density: 0.007808
+Residual: 0.000000
+N_pixels: 128
+Angles: 120
+M (pre deletion): 21720
+N (pre deletion): 16384
+M: 19558
+N: 16384
+Density: 0.007808
+Residual: 0.000000

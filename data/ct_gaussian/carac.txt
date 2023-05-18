@@ -1,0 +1,40 @@
+N_pixels: 128
+Angles: 120
+Eta: 0.1000
+Seed: 1
+M (pre deletion): 21720
+N (pre deletion): 16384
+M: 19558
+N: 16384
+Density: 0.007808
+Residual: 0.000000
+N_pixels: 128
+Angles: 120
+Eta: 0.002000
+Seed: 2
+M (pre deletion): 21720
+N (pre deletion): 16384
+M: 19558
+N: 16384
+Density: 0.007808
+Residual: 0.000000
+N_pixels: 128
+Angles: 120
+Eta: 0.004000
+Seed: 3
+M (pre deletion): 21720
+N (pre deletion): 16384
+M: 19558
+N: 16384
+Density: 0.007808
+Residual: 0.000000
+N_pixels: 128
+Angles: 120
+Eta: 0.008000
+Seed: 4
+M (pre deletion): 21720
+N (pre deletion): 16384
+M: 19558
+N: 16384
+Density: 0.007808
+Residual: 0.000000

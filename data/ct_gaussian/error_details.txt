@@ -1,0 +1,16 @@
+norm(A*x-b_error): 2.092413
+norm(A*x_ls-b_error): 0.840552
+norm(A*x_ls_reg-b_error): 1.793132
+norm(x-x_ls): 6.311609
+norm(A*x-b_error): 4.177980
+norm(A*x_ls-b_error): 1.668842
+norm(A*x_ls_reg-b_error): 3.316463
+norm(x-x_ls): 12.718053
+norm(A*x-b_error): 8.343248
+norm(A*x_ls-b_error): 3.380236
+norm(A*x_ls_reg-b_error): 6.650596
+norm(x-x_ls): 26.618508
+norm(A*x-b_error): 16.939363
+norm(A*x_ls-b_error): 6.915173
+norm(A*x_ls_reg-b_error): 13.267262
+norm(x-x_ls): 48.986052

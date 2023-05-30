@@ -43,11 +43,11 @@ lines_seq_uni1 = [it_seq_uni1[i]*8*bsize[int(i%4)]*rep[int(i/4)] for i in range(
 lines_seq_uni2 = [it_seq_uni2[i]*8*bsize[int(i%4)]*rep[int(i/4)] for i in range(16)]
 
 import matplotlib.pylab as pylab
-params = {'legend.fontsize': 'x-large',
+params = {'legend.fontsize': 'xx-large',
          'axes.labelsize': 'xx-large',
          'axes.titlesize':'xx-large',
-         'xtick.labelsize':'x-large',
-         'ytick.labelsize':'x-large'}
+         'xtick.labelsize': 'xx-large',
+         'ytick.labelsize': 'xx-large'}
 pylab.rcParams.update(params)
 
 plt.rc('text', usetex=True)

@@ -65,11 +65,11 @@ time_par_8_uni_3 = time[29::32]
 time_par_8_uni_4 = time[31::32]
 
 import matplotlib.pylab as pylab
-params = {'legend.fontsize': 'larger',
-         'axes.labelsize': 'x-large',
-         'axes.titlesize':'x-large',
-         'xtick.labelsize':'x-large',
-         'ytick.labelsize':'x-large'}
+params = {'legend.fontsize': 'xx-large',
+         'axes.labelsize': 'xx-large',
+         'axes.titlesize': 'xx-large',
+         'xtick.labelsize': 'xx-large',
+         'ytick.labelsize': 'xx-large'}
 pylab.rcParams.update(params)
 
 plt.rc('text', usetex=True)
@@ -80,7 +80,7 @@ plt.rc('font', family='serif')
 # plot_title = r"2 Threads - $4000 \times 1000$"
 
 # fig = plt.figure(figsize=(10, 7))
-# plt.axhline(y=time_seq_dim[0], linestyle='--', linewidth=1.5, color='grey', label=r'RK (Sequential)')
+# plt.axhline(y=time_seq_dim[0], linestyle='--', linewidth=1.5, color='black', label=r'RK (Sequential)')
 # plt.scatter(x, time_par_2[0:5], color='orange')
 # plt.plot(x, time_par_2[0:5], linewidth=1.5, color='orange', label=r'RKAB')
 # plt.scatter(x, time_par_2_uni_1[0:5], color='red')
@@ -110,7 +110,7 @@ plt.rc('font', family='serif')
 # plot_title = r"2 Threads - $20000 \times 1000$"
 
 # fig = plt.figure(figsize=(10, 7))
-# plt.axhline(y=time_seq_dim[1], linestyle='--', linewidth=1.5, color='grey', label=r'RK (Sequential)')
+# plt.axhline(y=time_seq_dim[1], linestyle='--', linewidth=1.5, color='black', label=r'RK (Sequential)')
 # plt.scatter(x, time_par_2[5:11], color='orange')
 # plt.plot(x, time_par_2[5:11], linewidth=1.5, color='orange', label=r'RKAB')
 # plt.scatter(x, time_par_2_uni_1[5:11], color='red')
@@ -138,7 +138,7 @@ plt.rc('font', family='serif')
 # plot_title = r"2 Threads - $20000 \times 4000$"
 
 # fig = plt.figure(figsize=(10, 7))
-# plt.axhline(y=time_seq_dim[2], linestyle='--', linewidth=1.5, color='grey', label=r'RK (Sequential)')
+# plt.axhline(y=time_seq_dim[2], linestyle='--', linewidth=1.5, color='black', label=r'RK (Sequential)')
 # plt.scatter(x, time_par_2[11:17], color='orange')
 # plt.plot(x, time_par_2[11:17], linewidth=1.5, color='orange', label=r'RKAB')
 # plt.scatter(x, time_par_2_uni_1[11:17], color='red')
@@ -168,7 +168,7 @@ plt.rc('font', family='serif')
 # plot_title = r"2 Threads - $40000 \times 1000$"
 
 # fig = plt.figure(figsize=(10, 7))
-# plt.axhline(y=time_seq_dim[3], linestyle='--', linewidth=1.5, color='grey', label=r'RK (Sequential)')
+# plt.axhline(y=time_seq_dim[3], linestyle='--', linewidth=1.5, color='black', label=r'RK (Sequential)')
 # plt.scatter(x, time_par_2[17:23], color='orange')
 # plt.plot(x, time_par_2[17:23], linewidth=1.5, color='orange', label=r'RKAB')
 # plt.scatter(x, time_par_2_uni_1[17:23], color='red')
@@ -196,7 +196,7 @@ plt.rc('font', family='serif')
 # plot_title = r"2 Threads - $40000 \times 4000$"
 
 # fig = plt.figure(figsize=(10, 7))
-# plt.axhline(y=time_seq_dim[4], linestyle='--', linewidth=1.5, color='grey', label=r'RK (Sequential)')
+# plt.axhline(y=time_seq_dim[4], linestyle='--', linewidth=1.5, color='black', label=r'RK (Sequential)')
 # plt.scatter(x, time_par_2[23:29], color='orange')
 # plt.plot(x, time_par_2[23:29], linewidth=1.5, color='orange', label=r'RKAB')
 # plt.scatter(x, time_par_2_uni_1[23:29], color='red')
@@ -224,7 +224,7 @@ plt.rc('font', family='serif')
 # plot_title = r"2 Threads - $40000 \times 10000$"
 
 # fig = plt.figure(figsize=(10, 7))
-# plt.axhline(y=time_seq_dim[5], linestyle='--', linewidth=1.5, color='grey', label=r'RK (Sequential)')
+# plt.axhline(y=time_seq_dim[5], linestyle='--', linewidth=1.5, color='black', label=r'RK (Sequential)')
 # plt.scatter(x, time_par_2[29:35], color='orange')
 # plt.plot(x, time_par_2[29:35], linewidth=1.5, color='orange', label=r'RKAB')
 # plt.scatter(x, time_par_2_uni_1[29:35], color='red')
@@ -254,7 +254,7 @@ x = [5, 10, 50, 100, 500, 1000, 10000]
 plot_title = r"2 Threads - $80000 \times 1000$"
 
 fig = plt.figure(figsize=(10, 7))
-plt.axhline(y=time_seq_dim[6], linestyle='--', linewidth=1.5, color='grey', label=r'RK (Sequential)')
+plt.axhline(y=time_seq_dim[6], linestyle='--', linewidth=1.5, color='black', label=r'RK (Sequential)')
 plt.scatter(x, time_par_2[42:49], color='orange')
 plt.plot(x, time_par_2[42:49], linewidth=1.5, color='orange', label=r'RKAB')
 plt.scatter(x, time_par_2_uni_1, color='red')
@@ -282,7 +282,7 @@ fig.savefig("plots/omp/png/"+filename_fig+".png", bbox_inches='tight')
 # plot_title = r"2 Threads - $80000 \times 4000$"
 
 # fig = plt.figure(figsize=(10, 7))
-# plt.axhline(y=time_seq_dim[7], linestyle='--', linewidth=1.5, color='grey', label=r'RK (Sequential)')
+# plt.axhline(y=time_seq_dim[7], linestyle='--', linewidth=1.5, color='black', label=r'RK (Sequential)')
 # plt.scatter(x, time_par_2[42:49], color='orange')
 # plt.plot(x, time_par_2[42:49], linewidth=1.5, color='orange', label=r'RKAB')
 # plt.scatter(x, time_par_2_uni_1[42:49], color='red')
@@ -310,7 +310,7 @@ fig.savefig("plots/omp/png/"+filename_fig+".png", bbox_inches='tight')
 # plot_title = r"2 Threads - $80000 \times 10000$"
 
 # fig = plt.figure(figsize=(10, 7))
-# plt.axhline(y=time_seq_dim[8], linestyle='--', linewidth=1.5, color='grey', label=r'RK (Sequential)')
+# plt.axhline(y=time_seq_dim[8], linestyle='--', linewidth=1.5, color='black', label=r'RK (Sequential)')
 # plt.scatter(x, time_par_2[49:56], color='orange')
 # plt.plot(x, time_par_2[49:56], linewidth=1.5, color='orange', label=r'RKAB')
 # plt.scatter(x, time_par_2_uni_1[49:56], color='red')
@@ -338,7 +338,7 @@ fig.savefig("plots/omp/png/"+filename_fig+".png", bbox_inches='tight')
 # plot_title = r"4 Threads - $4000 \times 1000$"
 
 # fig = plt.figure(figsize=(10, 7))
-# plt.axhline(y=time_seq_dim[0], linestyle='--', linewidth=1.5, color='grey', label=r'RK (Sequential)')
+# plt.axhline(y=time_seq_dim[0], linestyle='--', linewidth=1.5, color='black', label=r'RK (Sequential)')
 # plt.scatter(x, time_par_4[0:5], color='orange')
 # plt.plot(x, time_par_4[0:5], linewidth=1.5, color='orange', label=r'RKAB')
 # plt.scatter(x, time_par_4_uni_1[0:5], color='red')
@@ -368,7 +368,7 @@ fig.savefig("plots/omp/png/"+filename_fig+".png", bbox_inches='tight')
 # plot_title = r"4 Threads - $20000 \times 1000$"
 
 # fig = plt.figure(figsize=(10, 7))
-# plt.axhline(y=time_seq_dim[1], linestyle='--', linewidth=1.5, color='grey', label=r'RK (Sequential)')
+# plt.axhline(y=time_seq_dim[1], linestyle='--', linewidth=1.5, color='black', label=r'RK (Sequential)')
 # plt.scatter(x, time_par_4[5:11], color='orange')
 # plt.plot(x, time_par_4[5:11], linewidth=1.5, color='orange', label=r'RKAB')
 # plt.scatter(x, time_par_4_uni_1[5:11], color='red')
@@ -396,7 +396,7 @@ fig.savefig("plots/omp/png/"+filename_fig+".png", bbox_inches='tight')
 # plot_title = r"4 Threads - $20000 \times 4000$"
 
 # fig = plt.figure(figsize=(10, 7))
-# plt.axhline(y=time_seq_dim[2], linestyle='--', linewidth=1.5, color='grey', label=r'RK (Sequential)')
+# plt.axhline(y=time_seq_dim[2], linestyle='--', linewidth=1.5, color='black', label=r'RK (Sequential)')
 # plt.scatter(x, time_par_4[11:17], color='orange')
 # plt.plot(x, time_par_4[11:17], linewidth=1.5, color='orange', label=r'RKAB')
 # plt.scatter(x, time_par_4_uni_1[11:17], color='red')
@@ -426,7 +426,7 @@ fig.savefig("plots/omp/png/"+filename_fig+".png", bbox_inches='tight')
 # plot_title = r"4 Threads - $40000 \times 1000$"
 
 # fig = plt.figure(figsize=(10, 7))
-# plt.axhline(y=time_seq_dim[3], linestyle='--', linewidth=1.5, color='grey', label=r'RK (Sequential)')
+# plt.axhline(y=time_seq_dim[3], linestyle='--', linewidth=1.5, color='black', label=r'RK (Sequential)')
 # plt.scatter(x, time_par_4[17:23], color='orange')
 # plt.plot(x, time_par_4[17:23], linewidth=1.5, color='orange', label=r'RKAB')
 # plt.scatter(x, time_par_4_uni_1[17:23], color='red')
@@ -454,7 +454,7 @@ fig.savefig("plots/omp/png/"+filename_fig+".png", bbox_inches='tight')
 # plot_title = r"4 Threads - $40000 \times 4000$"
 
 # fig = plt.figure(figsize=(10, 7))
-# plt.axhline(y=time_seq_dim[4], linestyle='--', linewidth=1.5, color='grey', label=r'RK (Sequential)')
+# plt.axhline(y=time_seq_dim[4], linestyle='--', linewidth=1.5, color='black', label=r'RK (Sequential)')
 # plt.scatter(x, time_par_4[23:29], color='orange')
 # plt.plot(x, time_par_4[23:29], linewidth=1.5, color='orange', label=r'RKAB')
 # plt.scatter(x, time_par_4_uni_1[23:29], color='red')
@@ -482,7 +482,7 @@ fig.savefig("plots/omp/png/"+filename_fig+".png", bbox_inches='tight')
 # plot_title = r"4 Threads - $40000 \times 10000$"
 
 # fig = plt.figure(figsize=(10, 7))
-# plt.axhline(y=time_seq_dim[5], linestyle='--', linewidth=1.5, color='grey', label=r'RK (Sequential)')
+# plt.axhline(y=time_seq_dim[5], linestyle='--', linewidth=1.5, color='black', label=r'RK (Sequential)')
 # plt.scatter(x, time_par_4[29:35], color='orange')
 # plt.plot(x, time_par_4[29:35], linewidth=1.5, color='orange', label=r'RKAB')
 # plt.scatter(x, time_par_4_uni_1[29:35], color='red')
@@ -512,7 +512,7 @@ x = [5, 10, 50, 100, 500, 1000, 10000]
 plot_title = r"4 Threads - $80000 \times 1000$"
 
 fig = plt.figure(figsize=(10, 7))
-plt.axhline(y=time_seq_dim[6], linestyle='--', linewidth=1.5, color='grey', label=r'RK (Sequential)')
+plt.axhline(y=time_seq_dim[6], linestyle='--', linewidth=1.5, color='black', label=r'RK (Sequential)')
 plt.scatter(x, time_par_4[42:49], color='orange')
 plt.plot(x, time_par_4[42:49], linewidth=1.5, color='orange', label=r'RKAB')
 plt.scatter(x, time_par_4_uni_1, color='red')
@@ -540,7 +540,7 @@ fig.savefig("plots/omp/png/"+filename_fig+".png", bbox_inches='tight')
 # plot_title = r"4 Threads - $80000 \times 4000$"
 
 # fig = plt.figure(figsize=(10, 7))
-# plt.axhline(y=time_seq_dim[7], linestyle='--', linewidth=1.5, color='grey', label=r'RK (Sequential)')
+# plt.axhline(y=time_seq_dim[7], linestyle='--', linewidth=1.5, color='black', label=r'RK (Sequential)')
 # plt.scatter(x, time_par_4[42:49], color='orange')
 # plt.plot(x, time_par_4[42:49], linewidth=1.5, color='orange', label=r'RKAB')
 # plt.scatter(x, time_par_4_uni_1[42:49], color='red')
@@ -568,7 +568,7 @@ fig.savefig("plots/omp/png/"+filename_fig+".png", bbox_inches='tight')
 # plot_title = r"4 Threads - $80000 \times 10000$"
 
 # fig = plt.figure(figsize=(10, 7))
-# plt.axhline(y=time_seq_dim[8], linestyle='--', linewidth=1.5, color='grey', label=r'RK (Sequential)')
+# plt.axhline(y=time_seq_dim[8], linestyle='--', linewidth=1.5, color='black', label=r'RK (Sequential)')
 # plt.scatter(x, time_par_4[49:56], color='orange')
 # plt.plot(x, time_par_4[49:56], linewidth=1.5, color='orange', label=r'RKAB')
 # plt.scatter(x, time_par_4_uni_1[49:56], color='red')
@@ -596,7 +596,7 @@ fig.savefig("plots/omp/png/"+filename_fig+".png", bbox_inches='tight')
 # plot_title = r"8 Threads - $4000 \times 1000$"
 
 # fig = plt.figure(figsize=(10, 7))
-# plt.axhline(y=time_seq_dim[0], linestyle='--', linewidth=1.5, color='grey', label=r'RK (Sequential)')
+# plt.axhline(y=time_seq_dim[0], linestyle='--', linewidth=1.5, color='black', label=r'RK (Sequential)')
 # plt.scatter(x, time_par_8[0:5], color='orange')
 # plt.plot(x, time_par_8[0:5], linewidth=1.5, color='orange', label=r'RKAB')
 # plt.scatter(x, time_par_8_uni_1[0:5], color='red')
@@ -626,7 +626,7 @@ fig.savefig("plots/omp/png/"+filename_fig+".png", bbox_inches='tight')
 # plot_title = r"8 Threads - $20000 \times 1000$"
 
 # fig = plt.figure(figsize=(10, 7))
-# plt.axhline(y=time_seq_dim[1], linestyle='--', linewidth=1.5, color='grey', label=r'RK (Sequential)')
+# plt.axhline(y=time_seq_dim[1], linestyle='--', linewidth=1.5, color='black', label=r'RK (Sequential)')
 # plt.scatter(x, time_par_8[5:11], color='orange')
 # plt.plot(x, time_par_8[5:11], linewidth=1.5, color='orange', label=r'RKAB')
 # plt.scatter(x, time_par_8_uni_1[5:11], color='red')
@@ -654,7 +654,7 @@ fig.savefig("plots/omp/png/"+filename_fig+".png", bbox_inches='tight')
 # plot_title = r"8 Threads - $20000 \times 4000$"
 
 # fig = plt.figure(figsize=(10, 7))
-# plt.axhline(y=time_seq_dim[2], linestyle='--', linewidth=1.5, color='grey', label=r'RK (Sequential)')
+# plt.axhline(y=time_seq_dim[2], linestyle='--', linewidth=1.5, color='black', label=r'RK (Sequential)')
 # plt.scatter(x, time_par_8[11:17], color='orange')
 # plt.plot(x, time_par_8[11:17], linewidth=1.5, color='orange', label=r'RKAB')
 # plt.scatter(x, time_par_8_uni_1[11:17], color='red')
@@ -684,7 +684,7 @@ fig.savefig("plots/omp/png/"+filename_fig+".png", bbox_inches='tight')
 # plot_title = r"8 Threads - $40000 \times 1000$"
 
 # fig = plt.figure(figsize=(10, 7))
-# plt.axhline(y=time_seq_dim[3], linestyle='--', linewidth=1.5, color='grey', label=r'RK (Sequential)')
+# plt.axhline(y=time_seq_dim[3], linestyle='--', linewidth=1.5, color='black', label=r'RK (Sequential)')
 # plt.scatter(x, time_par_8[17:23], color='orange')
 # plt.plot(x, time_par_8[17:23], linewidth=1.5, color='orange', label=r'RKAB')
 # plt.scatter(x, time_par_8_uni_1[17:23], color='red')
@@ -712,7 +712,7 @@ fig.savefig("plots/omp/png/"+filename_fig+".png", bbox_inches='tight')
 # plot_title = r"8 Threads - $40000 \times 4000$"
 
 # fig = plt.figure(figsize=(10, 7))
-# plt.axhline(y=time_seq_dim[4], linestyle='--', linewidth=1.5, color='grey', label=r'RK (Sequential)')
+# plt.axhline(y=time_seq_dim[4], linestyle='--', linewidth=1.5, color='black', label=r'RK (Sequential)')
 # plt.scatter(x, time_par_8[23:29], color='orange')
 # plt.plot(x, time_par_8[23:29], linewidth=1.5, color='orange', label=r'RKAB')
 # plt.scatter(x, time_par_8_uni_1[23:29], color='red')
@@ -740,7 +740,7 @@ fig.savefig("plots/omp/png/"+filename_fig+".png", bbox_inches='tight')
 # plot_title = r"8 Threads - $40000 \times 10000$"
 
 # fig = plt.figure(figsize=(10, 7))
-# plt.axhline(y=time_seq_dim[5], linestyle='--', linewidth=1.5, color='grey', label=r'RK (Sequential)')
+# plt.axhline(y=time_seq_dim[5], linestyle='--', linewidth=1.5, color='black', label=r'RK (Sequential)')
 # plt.scatter(x, time_par_8[29:35], color='orange')
 # plt.plot(x, time_par_8[29:35], linewidth=1.5, color='orange', label=r'RKAB')
 # plt.scatter(x, time_par_8_uni_1[29:35], color='red')
@@ -770,7 +770,7 @@ x = [5, 10, 50, 100, 500, 1000, 10000]
 plot_title = r"8 Threads - $80000 \times 1000$"
 
 fig = plt.figure(figsize=(10, 7))
-plt.axhline(y=time_seq_dim[6], linestyle='--', linewidth=1.5, color='grey', label=r'RK (Sequential)')
+plt.axhline(y=time_seq_dim[6], linestyle='--', linewidth=1.5, color='black', label=r'RK (Sequential)')
 plt.scatter(x, time_par_8[42:49], color='orange')
 plt.plot(x, time_par_8[42:49], linewidth=1.5, color='orange', label=r'RKAB')
 plt.scatter(x, time_par_8_uni_1, color='red')
@@ -798,7 +798,7 @@ fig.savefig("plots/omp/png/"+filename_fig+".png", bbox_inches='tight')
 # plot_title = r"8 Threads - $80000 \times 4000$"
 
 # fig = plt.figure(figsize=(10, 7))
-# plt.axhline(y=time_seq_dim[7], linestyle='--', linewidth=1.5, color='grey', label=r'RK (Sequential)')
+# plt.axhline(y=time_seq_dim[7], linestyle='--', linewidth=1.5, color='black', label=r'RK (Sequential)')
 # plt.scatter(x, time_par_8[42:49], color='orange')
 # plt.plot(x, time_par_8[42:49], linewidth=1.5, color='orange', label=r'RKAB')
 # plt.scatter(x, time_par_8_uni_1[42:49], color='red')
@@ -826,7 +826,7 @@ fig.savefig("plots/omp/png/"+filename_fig+".png", bbox_inches='tight')
 # plot_title = r"8 Threads - $80000 \times 10000$"
 
 # fig = plt.figure(figsize=(10, 7))
-# plt.axhline(y=time_seq_dim[8], linestyle='--', linewidth=1.5, color='grey', label=r'RK (Sequential)')
+# plt.axhline(y=time_seq_dim[8], linestyle='--', linewidth=1.5, color='black', label=r'RK (Sequential)')
 # plt.scatter(x, time_par_8[49:56], color='orange')
 # plt.plot(x, time_par_8[49:56], linewidth=1.5, color='orange', label=r'RKAB')
 # plt.scatter(x, time_par_8_uni_1[49:56], color='red')

@@ -34,11 +34,11 @@ speedup_4 = [time_seq_4[i]/time_par_4[i] for i in range(len(time_seq_4))]
 speedup_8 = [time_seq_8[i]/time_par_8[i] for i in range(len(time_seq_8))]
 
 import matplotlib.pylab as pylab
-params = {'legend.fontsize': 'larger',
+params = {'legend.fontsize': 'xx-large',
          'axes.labelsize': 'xx-large',
          'axes.titlesize':'xx-large',
-         'xtick.labelsize':'x-large',
-         'ytick.labelsize':'x-large'}
+         'xtick.labelsize': 'xx-large',
+         'ytick.labelsize': 'xx-large'}
 pylab.rcParams.update(params)
 
 plt.rc('text', usetex=True)

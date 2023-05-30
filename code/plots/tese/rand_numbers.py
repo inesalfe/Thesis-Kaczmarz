@@ -5,6 +5,14 @@ from matplotlib.pyplot import gca
 import matplotlib.font_manager
 import sys
 
+import matplotlib.pylab as pylab
+params = {'legend.fontsize': 'xx-large',
+         'axes.labelsize': 'xx-large',
+         'axes.titlesize': 'xx-large',
+         'xtick.labelsize': 'xx-large',
+         'ytick.labelsize': 'xx-large'}
+pylab.rcParams.update(params)
+
 # python3 plots/tese/rand_numbers.py
 
 filename = "outputs/seq/rand_rows.txt";

@@ -260,7 +260,7 @@ plt.plot(it_res_20, res_20, color='magenta', label=r'$q = 20$')
 plt.plot(it_res_50, res_50, color='purple', label=r'$q = 50$')
 plt.plot(it_res_100, res_100, color='blue', label=r'$q = 100$')
 plt.plot(it_res_1000, res_1000, color='black', label=r'$q = 1000$')
-plt.axhline(y=res_norm, color='grey', linestyle='--', label=r'$\|Ax_{LS}-b\|$')
+plt.axhline(y=res_norm, color='black', linestyle='--', label=r'$\|Ax_{LS}-b\|$')
 
 filename_fig2 = "RKA_res_" + str(M) + "_" + str(N)
 

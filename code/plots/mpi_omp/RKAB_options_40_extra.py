@@ -40,11 +40,11 @@ it_par_op2_80000_10000 = [it[i+2] for i in indices]
 x_80000_10000 = [4, 8, 20, 40]
 
 import matplotlib.pylab as pylab
-params = {'legend.fontsize': 'larger',
-         'axes.labelsize': 'x-large',
-         'axes.titlesize':'x-large',
-         'xtick.labelsize':'large',
-         'ytick.labelsize':'x-large'}
+params = {'legend.fontsize': 'xx-large',
+         'axes.labelsize': 'xx-large',
+         'axes.titlesize': 'xx-large',
+         'xtick.labelsize': 'xx-large',
+         'ytick.labelsize': 'xx-large'}
 pylab.rcParams.update(params)
 
 plt.rc('text', usetex=True)
@@ -182,11 +182,11 @@ it_par_op2_80000_10000 = [it[i+2] for i in indices]
 x_80000_10000 = [4, 8, 20, 40]
 
 import matplotlib.pylab as pylab
-params = {'legend.fontsize': 'larger',
-         'axes.labelsize': 'x-large',
-         'axes.titlesize':'x-large',
-         'xtick.labelsize':'x-large',
-         'ytick.labelsize':'x-large'}
+params = {'legend.fontsize': 'xx-large',
+         'axes.labelsize': 'xx-large',
+         'axes.titlesize': 'xx-large',
+         'xtick.labelsize': 'xx-large',
+         'ytick.labelsize': 'xx-large'}
 pylab.rcParams.update(params)
 
 plt.rc('text', usetex=True)

@@ -85,11 +85,11 @@ it_80000_10000 = it[45:50]
 x = [15, 20, 100, 1000, 10000]
 
 import matplotlib.pylab as pylab
-params = {'legend.fontsize': 'x-large',
-         'axes.labelsize': 'x-large',
-         'axes.titlesize':'x-large',
-         'xtick.labelsize':'x-large',
-         'ytick.labelsize':'x-large'}
+params = {'legend.fontsize': 'xx-large',
+         'axes.labelsize': 'xx-large',
+         'axes.titlesize': 'xx-large',
+         'xtick.labelsize': 'xx-large',
+         'ytick.labelsize': 'xx-large'}
 pylab.rcParams.update(params)
 
 plt.rc('text', usetex=True)

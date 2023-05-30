@@ -45,11 +45,11 @@ RK_quasirand_sobol_time = time
 x = range(1,file_size+1);
 
 import matplotlib.pylab as pylab
-params = {'legend.fontsize': 'larger',
-         'axes.labelsize': 'x-large',
-         'axes.titlesize':'x-large',
+params = {'legend.fontsize': 'xx-large',
+         'axes.labelsize': 'xx-large',
+         'axes.titlesize': 'xx-large',
          'xtick.labelsize':'medium',
-         'ytick.labelsize':'x-large'}
+         'ytick.labelsize': 'xx-large'}
 pylab.rcParams.update(params)
 
 plt.rc('text', usetex=True)

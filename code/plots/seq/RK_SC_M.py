@@ -78,11 +78,11 @@ time_40000 = [100.0-100.0*time_40000_no_SC[i]/time_40000_SC[i] for i in range(le
 time_80000 = [100.0-100.0*time_80000_no_SC[i]/time_80000_SC[i] for i in range(len(time_80000_no_SC))]
 
 import matplotlib.pylab as pylab
-params = {'legend.fontsize': 'x-large',
-         'axes.labelsize': 'x-large',
-         'axes.titlesize':'x-large',
-         'xtick.labelsize':'x-large',
-         'ytick.labelsize':'x-large'}
+params = {'legend.fontsize': 'xx-large',
+         'axes.labelsize': 'xx-large',
+         'axes.titlesize': 'xx-large',
+         'xtick.labelsize': 'xx-large',
+         'ytick.labelsize': 'xx-large'}
 pylab.rcParams.update(params)
 
 plt.rc('text', usetex=True)

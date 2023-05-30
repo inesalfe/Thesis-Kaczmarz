@@ -259,11 +259,11 @@ time_per_it_op3_20_10000 = [time_par_op3_20[i]/it_par_op3_20[i] for i in indices
 x_10000 = [40000, 80000]
 
 import matplotlib.pylab as pylab
-params = {'legend.fontsize': 'larger',
-         'axes.labelsize': 'x-large',
-         'axes.titlesize':'x-large',
-         'xtick.labelsize':'x-large',
-         'ytick.labelsize':'x-large'}
+params = {'legend.fontsize': 'xx-large',
+         'axes.labelsize': 'xx-large',
+         'axes.titlesize': 'xx-large',
+         'xtick.labelsize': 'xx-large',
+         'ytick.labelsize': 'xx-large'}
 pylab.rcParams.update(params)
 
 plt.rc('text', usetex=True)
@@ -600,8 +600,8 @@ fig.savefig("plots/mpi/png/"+filename_fig+".png", bbox_inches='tight')
 plot_title = r"Time"
 
 fig = plt.figure(figsize=(10, 7))
-plt.scatter(x_1000, time_seq_4_1000, color='gray')
-plt.plot(x_1000, time_seq_4_1000, linewidth=1.5, color='gray', label=r'Sequential')
+plt.scatter(x_1000, time_seq_4_1000, color='black')
+plt.plot(x_1000, time_seq_4_1000, linewidth=1.5, color='black', label=r'Sequential')
 plt.scatter(x_1000, time_par_op1_4_1000, color='orange')
 plt.plot(x_1000, time_par_op1_4_1000, linewidth=1.5, color='orange', label=r'1 Processs per node (4 nodes)')
 plt.scatter(x_1000, time_par_op2_4_1000, color='red')
@@ -625,8 +625,8 @@ fig.savefig("plots/mpi/png/"+filename_fig+".png", bbox_inches='tight')
 plot_title = r"Time"
 
 fig = plt.figure(figsize=(10, 7))
-plt.scatter(x_1000, time_seq_8_1000, color='gray')
-plt.plot(x_1000, time_seq_8_1000, linewidth=1.5, color='gray', label=r'Sequential')
+plt.scatter(x_1000, time_seq_8_1000, color='black')
+plt.plot(x_1000, time_seq_8_1000, linewidth=1.5, color='black', label=r'Sequential')
 plt.scatter(x_1000, time_par_op1_8_1000, color='orange')
 plt.plot(x_1000, time_par_op1_8_1000, linewidth=1.5, color='orange', label=r'1 Processs per node (8 nodes)')
 plt.scatter(x_1000, time_par_op2_8_1000, color='red')
@@ -650,8 +650,8 @@ fig.savefig("plots/mpi/png/"+filename_fig+".png", bbox_inches='tight')
 plot_title = r"Time"
 
 fig = plt.figure(figsize=(10, 7))
-plt.scatter(x_1000, time_seq_20_1000, color='gray')
-plt.plot(x_1000, time_seq_20_1000, linewidth=1.5, color='gray', label=r'Sequential')
+plt.scatter(x_1000, time_seq_20_1000, color='black')
+plt.plot(x_1000, time_seq_20_1000, linewidth=1.5, color='black', label=r'Sequential')
 plt.scatter(x_1000, time_par_op1_20_1000, color='orange')
 plt.plot(x_1000, time_par_op1_20_1000, linewidth=1.5, color='orange', label=r'1 Processs per node (20 nodes)')
 plt.scatter(x_1000, time_par_op2_20_1000, color='red')
@@ -675,8 +675,8 @@ fig.savefig("plots/mpi/png/"+filename_fig+".png", bbox_inches='tight')
 plot_title = r"Time"
 
 fig = plt.figure(figsize=(10, 7))
-plt.scatter(x_4000, time_seq_4_4000, color='gray')
-plt.plot(x_4000, time_seq_4_4000, linewidth=1.5, color='gray', label=r'Sequential')
+plt.scatter(x_4000, time_seq_4_4000, color='black')
+plt.plot(x_4000, time_seq_4_4000, linewidth=1.5, color='black', label=r'Sequential')
 plt.scatter(x_4000, time_par_op1_4_4000, color='orange')
 plt.plot(x_4000, time_par_op1_4_4000, linewidth=1.5, color='orange', label=r'1 Processs per node (4 nodes)')
 plt.scatter(x_4000, time_par_op2_4_4000, color='red')
@@ -700,8 +700,8 @@ fig.savefig("plots/mpi/png/"+filename_fig+".png", bbox_inches='tight')
 plot_title = r"Time"
 
 fig = plt.figure(figsize=(10, 7))
-plt.scatter(x_4000, time_seq_8_4000, color='gray')
-plt.plot(x_4000, time_seq_8_4000, linewidth=1.5, color='gray', label=r'Sequential')
+plt.scatter(x_4000, time_seq_8_4000, color='black')
+plt.plot(x_4000, time_seq_8_4000, linewidth=1.5, color='black', label=r'Sequential')
 plt.scatter(x_4000, time_par_op1_8_4000, color='orange')
 plt.plot(x_4000, time_par_op1_8_4000, linewidth=1.5, color='orange', label=r'1 Processs per node (8 nodes)')
 plt.scatter(x_4000, time_par_op2_8_4000, color='red')
@@ -725,8 +725,8 @@ fig.savefig("plots/mpi/png/"+filename_fig+".png", bbox_inches='tight')
 plot_title = r"Time"
 
 fig = plt.figure(figsize=(10, 7))
-plt.scatter(x_4000, time_seq_20_4000, color='gray')
-plt.plot(x_4000, time_seq_20_4000, linewidth=1.5, color='gray', label=r'Sequential')
+plt.scatter(x_4000, time_seq_20_4000, color='black')
+plt.plot(x_4000, time_seq_20_4000, linewidth=1.5, color='black', label=r'Sequential')
 plt.scatter(x_4000, time_par_op1_20_4000, color='orange')
 plt.plot(x_4000, time_par_op1_20_4000, linewidth=1.5, color='orange', label=r'1 Processs per node (20 nodes)')
 plt.scatter(x_4000, time_par_op2_20_4000, color='red')
@@ -750,8 +750,8 @@ fig.savefig("plots/mpi/png/"+filename_fig+".png", bbox_inches='tight')
 plot_title = r"Time"
 
 fig = plt.figure(figsize=(10, 7))
-plt.scatter(x_10000, time_seq_4_10000, color='gray')
-plt.plot(x_10000, time_seq_4_10000, linewidth=1.5, color='gray', label=r'Sequential')
+plt.scatter(x_10000, time_seq_4_10000, color='black')
+plt.plot(x_10000, time_seq_4_10000, linewidth=1.5, color='black', label=r'Sequential')
 plt.scatter(x_10000, time_par_op1_4_10000, color='orange')
 plt.plot(x_10000, time_par_op1_4_10000, linewidth=1.5, color='orange', label=r'1 Processs per node (4 nodes)')
 plt.scatter(x_10000, time_par_op2_4_10000, color='red')
@@ -775,8 +775,8 @@ fig.savefig("plots/mpi/png/"+filename_fig+".png", bbox_inches='tight')
 plot_title = r"Time"
 
 fig = plt.figure(figsize=(10, 7))
-plt.scatter(x_10000, time_seq_8_10000, color='gray')
-plt.plot(x_10000, time_seq_8_10000, linewidth=1.5, color='gray', label=r'Sequential')
+plt.scatter(x_10000, time_seq_8_10000, color='black')
+plt.plot(x_10000, time_seq_8_10000, linewidth=1.5, color='black', label=r'Sequential')
 plt.scatter(x_10000, time_par_op1_8_10000, color='orange')
 plt.plot(x_10000, time_par_op1_8_10000, linewidth=1.5, color='orange', label=r'1 Processs per node (8 nodes)')
 plt.scatter(x_10000, time_par_op2_8_10000, color='red')
@@ -800,8 +800,8 @@ fig.savefig("plots/mpi/png/"+filename_fig+".png", bbox_inches='tight')
 plot_title = r"Time"
 
 fig = plt.figure(figsize=(10, 7))
-plt.scatter(x_10000, time_seq_20_10000, color='gray')
-plt.plot(x_10000, time_seq_20_10000, linewidth=1.5, color='gray', label=r'Sequential')
+plt.scatter(x_10000, time_seq_20_10000, color='black')
+plt.plot(x_10000, time_seq_20_10000, linewidth=1.5, color='black', label=r'Sequential')
 plt.scatter(x_10000, time_par_op1_20_10000, color='orange')
 plt.plot(x_10000, time_par_op1_20_10000, linewidth=1.5, color='orange', label=r'1 Processs per node (20 nodes)')
 plt.scatter(x_10000, time_par_op2_20_10000, color='red')

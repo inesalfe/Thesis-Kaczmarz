@@ -164,11 +164,11 @@ total_lines_par_20_10000 = [20*it_par_20[i]*10000 for i in indices]
 x_10000 = [40000, 80000]
 
 import matplotlib.pylab as pylab
-params = {'legend.fontsize': 'larger',
-         'axes.labelsize': 'x-large',
-         'axes.titlesize':'x-large',
-         'xtick.labelsize':'x-large',
-         'ytick.labelsize':'x-large'}
+params = {'legend.fontsize': 'xx-large',
+         'axes.labelsize': 'xx-large',
+         'axes.titlesize': 'xx-large',
+         'xtick.labelsize': 'xx-large',
+         'ytick.labelsize': 'xx-large'}
 pylab.rcParams.update(params)
 
 plt.rc('text', usetex=True)
@@ -525,8 +525,8 @@ fig.savefig("plots/mpi/png/"+filename_fig+".png", bbox_inches='tight')
 plot_title = r"Total Number of Used Rows using $n = 1000$"
 
 fig = plt.figure(figsize=(10, 7))
-plt.scatter(x_1000, it_seq_1000, color='gray')
-plt.plot(x_1000, it_seq_1000, linewidth=1.5, color='gray', label=r'RK')
+plt.scatter(x_1000, it_seq_1000, color='black')
+plt.plot(x_1000, it_seq_1000, linewidth=1.5, color='black', label=r'RK')
 plt.scatter(x_1000, total_lines_par_2_1000, color='orange')
 plt.plot(x_1000, total_lines_par_2_1000, linewidth=1.5, color='orange', label=r'RKAB with 2 Tasks')
 plt.scatter(x_1000, total_lines_par_4_1000, color='red')
@@ -552,8 +552,8 @@ fig.savefig("plots/mpi/png/"+filename_fig+".png", bbox_inches='tight')
 plot_title = r"Iterations using $n = 1000$"
 
 fig = plt.figure(figsize=(10, 7))
-plt.scatter(x_1000, it_seq_1000, color='gray')
-plt.plot(x_1000, it_seq_1000, linewidth=1.5, color='gray', label=r'RK')
+plt.scatter(x_1000, it_seq_1000, color='black')
+plt.plot(x_1000, it_seq_1000, linewidth=1.5, color='black', label=r'RK')
 plt.scatter(x_1000, it_par_2_1000, color='orange')
 plt.plot(x_1000, it_par_2_1000, linewidth=1.5, color='orange', label=r'RKAB with 2 Tasks')
 plt.scatter(x_1000, it_par_4_1000, color='red')
@@ -579,8 +579,8 @@ fig.savefig("plots/mpi/png/"+filename_fig+".png", bbox_inches='tight')
 plot_title = r"Time using $n = 1000$"
 
 fig = plt.figure(figsize=(10, 7))
-plt.scatter(x_1000, time_seq_1000, color='gray')
-plt.plot(x_1000, time_seq_1000, linewidth=1.5, color='gray', label=r'RK')
+plt.scatter(x_1000, time_seq_1000, color='black')
+plt.plot(x_1000, time_seq_1000, linewidth=1.5, color='black', label=r'RK')
 plt.scatter(x_1000, time_par_2_1000, color='orange')
 plt.plot(x_1000, time_par_2_1000, linewidth=1.5, color='orange', label=r'RKAB with 2 Tasks')
 plt.scatter(x_1000, time_par_4_1000, color='red')

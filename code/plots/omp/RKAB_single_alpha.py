@@ -46,11 +46,11 @@ it_8_80000_4000_1000 = it[80:84]
 it_8_80000_4000_4000 = it[84:87]
 
 import matplotlib.pylab as pylab
-params = {'legend.fontsize': 'larger',
+params = {'legend.fontsize': 'xx-large',
          'axes.labelsize': 'xx-large',
          'axes.titlesize':'xx-large',
-         'xtick.labelsize':'x-large',
-         'ytick.labelsize':'x-large'}
+         'xtick.labelsize': 'xx-large',
+         'ytick.labelsize': 'xx-large'}
 pylab.rcParams.update(params)
 
 plt.rc('text', usetex=True)
@@ -61,7 +61,7 @@ alpha_4 = [1.0, 1.5, 2.0, 2.5, 3.0, 3.99183]
 alpha_8 = [1.0, 2.0, 2.5, 3.0, 5.0, 7.96199]
 
 fig = plt.figure(figsize=(10, 7))
-plt.axvline(x=1.99864, ymin=0, ymax=2**10, linewidth=1.5, linestyle='--', color='gray', label=r'$\alpha^*$')
+plt.axvline(x=1.99864, ymin=0, ymax=2**10, linewidth=1.5, linestyle='--', color='black', label=r'$\alpha^*$')
 plt.scatter(alpha_2[:len(it_2_80000_1000_50)], it_2_80000_1000_50, color='orange')
 plt.plot(alpha_2[:len(it_2_80000_1000_50)], it_2_80000_1000_50, linewidth=1.5, color='orange', label=r'Block Size = 50')
 plt.scatter(alpha_2[:len(it_2_80000_1000_500)], it_2_80000_1000_500, color='red')
@@ -83,7 +83,7 @@ fig.savefig("plots/omp/png/"+filename_fig+".png", bbox_inches='tight')
 plt.close()
 
 fig = plt.figure(figsize=(10, 7))
-plt.axvline(x=3.99183, ymin=0, ymax=2**10, linewidth=1.5, linestyle='--', color='gray', label=r'$\alpha^*$')
+plt.axvline(x=3.99183, ymin=0, ymax=2**10, linewidth=1.5, linestyle='--', color='black', label=r'$\alpha^*$')
 plt.scatter(alpha_4[:len(it_4_80000_1000_50)], it_4_80000_1000_50, color='orange')
 plt.plot(alpha_4[:len(it_4_80000_1000_50)], it_4_80000_1000_50, linewidth=1.5, color='orange', label=r'Block Size = 50')
 plt.scatter(alpha_4[:len(it_4_80000_1000_500)], it_4_80000_1000_500, color='red')
@@ -105,7 +105,7 @@ fig.savefig("plots/omp/png/"+filename_fig+".png", bbox_inches='tight')
 plt.close()
 
 fig = plt.figure(figsize=(10, 7))
-plt.axvline(x=7.96199, ymin=0, ymax=2**10, linewidth=1.5, linestyle='--', color='gray', label=r'$\alpha^*$')
+plt.axvline(x=7.96199, ymin=0, ymax=2**10, linewidth=1.5, linestyle='--', color='black', label=r'$\alpha^*$')
 plt.scatter(alpha_8[:len(it_8_80000_1000_50)], it_8_80000_1000_50, color='orange')
 plt.plot(alpha_8[:len(it_8_80000_1000_50)], it_8_80000_1000_50, linewidth=1.5, color='orange', label=r'Block Size = 50')
 plt.scatter(alpha_8[:len(it_8_80000_1000_500)], it_8_80000_1000_500, color='red')
@@ -131,7 +131,7 @@ alpha_4 = [1.0, 1.5, 2.0, 2.5, 3.0, 3.99965]
 alpha_8 = [1.0, 2.0, 2.5, 3.0, 5.0, 7.99839]
 
 fig = plt.figure(figsize=(10, 7))
-plt.axvline(x=1.99994, ymin=0, ymax=2**10, linewidth=1.5, linestyle='--', color='gray', label=r'$\alpha^*$')
+plt.axvline(x=1.99994, ymin=0, ymax=2**10, linewidth=1.5, linestyle='--', color='black', label=r'$\alpha^*$')
 plt.scatter(alpha_2[:len(it_2_80000_4000_500)], it_2_80000_4000_500, color='orange')
 plt.plot(alpha_2[:len(it_2_80000_4000_500)], it_2_80000_4000_500, linewidth=1.5, color='orange', label=r'Block Size = 50')
 plt.scatter(alpha_2[:len(it_2_80000_4000_1000)], it_2_80000_4000_1000, color='red')
@@ -153,7 +153,7 @@ fig.savefig("plots/omp/png/"+filename_fig+".png", bbox_inches='tight')
 plt.close()
 
 fig = plt.figure(figsize=(10, 7))
-plt.axvline(x=3.99965, ymin=0, ymax=2**10, linewidth=1.5, linestyle='--', color='gray', label=r'$\alpha^*$')
+plt.axvline(x=3.99965, ymin=0, ymax=2**10, linewidth=1.5, linestyle='--', color='black', label=r'$\alpha^*$')
 plt.scatter(alpha_4[:len(it_4_80000_4000_500)], it_4_80000_4000_500, color='orange')
 plt.plot(alpha_4[:len(it_4_80000_4000_500)], it_4_80000_4000_500, linewidth=1.5, color='orange', label=r'Block Size = 50')
 plt.scatter(alpha_4[:len(it_4_80000_4000_1000)], it_4_80000_4000_1000, color='red')
@@ -175,7 +175,7 @@ fig.savefig("plots/omp/png/"+filename_fig+".png", bbox_inches='tight')
 plt.close()
 
 fig = plt.figure(figsize=(10, 7))
-plt.axvline(x=7.99839, ymin=0, ymax=2**10, linewidth=1.5, linestyle='--', color='gray', label=r'$\alpha^*$')
+plt.axvline(x=7.99839, ymin=0, ymax=2**10, linewidth=1.5, linestyle='--', color='black', label=r'$\alpha^*$')
 plt.scatter(alpha_8[:len(it_8_80000_4000_500)], it_8_80000_4000_500, color='orange')
 plt.plot(alpha_8[:len(it_8_80000_4000_500)], it_8_80000_4000_500, linewidth=1.5, color='orange', label=r'Block Size = 50')
 plt.scatter(alpha_8[:len(it_8_80000_4000_1000)], it_8_80000_4000_1000, color='red')

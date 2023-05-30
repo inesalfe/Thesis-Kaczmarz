@@ -143,11 +143,11 @@ lines_par_4_10000 = [it_par_4_10000[i]*4*10000 for i in range(9)]
 lines_par_8_10000 = [it_par_8_10000[i]*8*10000 for i in range(9)]
 
 import matplotlib.pylab as pylab
-params = {'legend.fontsize': 'larger',
+params = {'legend.fontsize': 'xx-large',
          'axes.labelsize': 'xx-large',
          'axes.titlesize':'xx-large',
-         'xtick.labelsize':'x-large',
-         'ytick.labelsize':'x-large'}
+         'xtick.labelsize': 'xx-large',
+         'ytick.labelsize': 'xx-large'}
 pylab.rcParams.update(params)
 
 plt.rc('text', usetex=True)
@@ -158,7 +158,7 @@ x = [5, 10, 50, 100, 500, 1000, 10000]
 plot_title = r"$80000 \times 1000$"
 
 fig = plt.figure(figsize=(10, 7))
-# plt.axhline(y=time_seq_dim[6], linestyle='--', linewidth=1.5, color='grey', label=r'Sequential')
+# plt.axhline(y=time_seq_dim[6], linestyle='--', linewidth=1.5, color='black', label=r'Sequential')
 plt.scatter(x, time_par_2[42:49], color='orange')
 plt.plot(x, time_par_2[42:49], linewidth=1.5, color='orange', label=r'Threads = 2')
 plt.scatter(x, time_par_4[42:49], color='red')
@@ -183,7 +183,7 @@ plt.close()
 plot_title = r"$80000 \times 1000$"
 
 fig = plt.figure(figsize=(10, 7))
-# plt.axhline(y=it_seq_dim[6], linestyle='--', linewidth=1.5, color='grey', label=r'Sequential')
+# plt.axhline(y=it_seq_dim[6], linestyle='--', linewidth=1.5, color='black', label=r'Sequential')
 plt.scatter(x, lines_par_2[42:49], color='orange')
 plt.plot(x, lines_par_2[42:49], linewidth=1.5, color='orange', label=r'Threads = 2')
 plt.scatter(x, lines_par_4[42:49], color='red')
@@ -208,7 +208,7 @@ plt.close()
 plot_title = r"$80000 \times 1000$"
 
 fig = plt.figure(figsize=(10, 7))
-# plt.axhline(y=it_seq_dim[6], linestyle='--', linewidth=1.5, color='grey', label=r'Sequential')
+# plt.axhline(y=it_seq_dim[6], linestyle='--', linewidth=1.5, color='black', label=r'Sequential')
 plt.scatter(x, it_par_2[42:49], color='orange')
 plt.plot(x, it_par_2[42:49], linewidth=1.5, color='orange', label=r'Threads = 2')
 plt.scatter(x, it_par_4[42:49], color='red')

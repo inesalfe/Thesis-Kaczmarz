@@ -49,11 +49,11 @@ time_par_8_uni_3 = time[29::32]
 time_par_8_uni_4 = time[31::32]
 
 import matplotlib.pylab as pylab
-params = {'legend.fontsize': 'larger',
-         'axes.labelsize': 'x-large',
-         'axes.titlesize':'x-large',
-         'xtick.labelsize':'x-large',
-         'ytick.labelsize':'x-large'}
+params = {'legend.fontsize': 'xx-large',
+         'axes.labelsize': 'xx-large',
+         'axes.titlesize': 'xx-large',
+         'xtick.labelsize': 'xx-large',
+         'ytick.labelsize': 'xx-large'}
 pylab.rcParams.update(params)
 
 plt.rc('text', usetex=True)
@@ -62,7 +62,7 @@ plt.rc('font', family='serif')
 x = [5, 10, 50, 100, 500, 1000, 10000]
 
 fig = plt.figure(figsize=(10, 7))
-plt.axhline(y=time_seq_dim[6], linewidth=1.5, linestyle='--', color='gray', label=r'SRKWOR')
+plt.axhline(y=time_seq_dim[6], linewidth=1.5, linestyle='--', color='black', label=r'SRKWOR')
 plt.scatter(x, time_par_2_uni_1, color='orange')
 plt.plot(x, time_par_2_uni_1, linewidth=1.5, color='orange', label=r'2 Threads - Option 1')
 plt.scatter(x, time_par_2_uni_2, color='orange')
@@ -131,7 +131,7 @@ time_seq_8_uni_4 = time[30::32]
 x = [5, 10, 50, 100, 500, 1000, 10000]
 
 fig = plt.figure(figsize=(10, 7))
-plt.axhline(y=time_seq_dim[7], linewidth=1.5, linestyle='--', color='gray', label=r'SRKWOR')
+plt.axhline(y=time_seq_dim[7], linewidth=1.5, linestyle='--', color='black', label=r'SRKWOR')
 plt.scatter(x, time_par_2_uni_1, color='orange')
 plt.plot(x, time_par_2_uni_1, linewidth=1.5, color='orange', label=r'2 Threads - Option 1')
 plt.scatter(x, time_par_2_uni_2, color='orange')

@@ -4,6 +4,14 @@ from matplotlib.pyplot import gca
 import matplotlib.font_manager
 import sys
 
+import matplotlib.pylab as pylab
+params = {'legend.fontsize': 'xx-large',
+         'axes.labelsize': 'xx-large',
+         'axes.titlesize': 'xx-large',
+         'xtick.labelsize': 'xx-large',
+         'ytick.labelsize': 'xx-large'}
+pylab.rcParams.update(params)
+
 # python3 plots/norms/hist_norms_dense_norm.py 80000 10000
 
 if (len(sys.argv) != 3):

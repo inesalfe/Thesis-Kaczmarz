@@ -109,11 +109,11 @@ for i in range(file_size):
 		res_50.append(float(lines[i].split()[1]))
 
 import matplotlib.pylab as pylab
-params = {'legend.fontsize': 'larger',
-         'axes.labelsize': 'x-large',
-         'axes.titlesize':'x-large',
-         'xtick.labelsize':'x-large',
-         'ytick.labelsize':'x-large'}
+params = {'legend.fontsize': 'xx-large',
+         'axes.labelsize': 'xx-large',
+         'axes.titlesize': 'xx-large',
+         'xtick.labelsize': 'xx-large',
+         'ytick.labelsize': 'xx-large'}
 pylab.rcParams.update(params)
 
 plt.rc('text', usetex=True)
@@ -127,7 +127,7 @@ ax.plot(it_res_4, res_4, color='red', label=r'$q = 4$')
 ax.plot(it_res_8, res_8, color='pink', label=r'$q = 8$')
 ax.plot(it_res_20, res_20, color='magenta', label=r'$q = 20$')
 ax.plot(it_res_50, res_50, color='purple', label=r'$q = 50$')
-ax.axhline(y=res_norm, color='grey', linestyle='--', label=r'$\|Ax_{LS}-b\|$')
+ax.axhline(y=res_norm, color='black', linestyle='--', label=r'$\|Ax_{LS}-b\|$')
 
 ax.grid()
 plt.xlim([1, max(it_res_1)])
@@ -143,7 +143,7 @@ axins.plot(it_res_4, res_4, color='red', label=r'$q = 4$')
 axins.plot(it_res_8, res_8, color='pink', label=r'$q = 8$')
 axins.plot(it_res_20, res_20, color='magenta', label=r'$q = 20$')
 axins.plot(it_res_50, res_50, color='purple', label=r'$q = 50$')
-axins.axhline(y=res_norm, color='grey', linestyle='--', label=r'$\|Ax_{LS}-b\|$')
+axins.axhline(y=res_norm, color='black', linestyle='--', label=r'$\|Ax_{LS}-b\|$')
 axins.set_xlim(x_min_res, x_max_res)
 axins.set_ylim(y_min_res, y_max_res)
 

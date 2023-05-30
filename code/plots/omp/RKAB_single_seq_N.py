@@ -194,11 +194,11 @@ lines_par_4_10000 = [it_par_4_10000[i]*4*10000 for i in range(9)]
 lines_par_8_10000 = [it_par_8_10000[i]*8*10000 for i in range(9)]
 
 import matplotlib.pylab as pylab
-params = {'legend.fontsize': 'larger',
+params = {'legend.fontsize': 'xx-large',
          'axes.labelsize': 'xx-large',
          'axes.titlesize':'xx-large',
-         'xtick.labelsize':'x-large',
-         'ytick.labelsize':'x-large'}
+         'xtick.labelsize': 'xx-large',
+         'ytick.labelsize': 'xx-large'}
 pylab.rcParams.update(params)
 
 plt.rc('text', usetex=True)
@@ -1347,7 +1347,7 @@ x = [5, 10, 50, 100, 500, 1000, 10000]
 plot_title = r"$4000 \times 1000$"
 
 fig = plt.figure(figsize=(10, 7))
-plt.axhline(y=time_seq_dim[0], linestyle='--', linewidth=1.5, color='grey', label=r'Sequential')
+plt.axhline(y=time_seq_dim[0], linestyle='--', linewidth=1.5, color='black', label=r'Sequential')
 plt.scatter(x, time_par_2[0:7], color='orange')
 plt.plot(x, time_par_2[0:7], linewidth=1.5, color='orange', label=r'Threads = 2')
 plt.scatter(x, time_par_4[0:7], color='red')
@@ -1372,7 +1372,7 @@ plt.close()
 plot_title = r"$20000 \times 1000$"
 
 fig = plt.figure(figsize=(10, 7))
-plt.axhline(y=time_seq_dim[1], linestyle='--', linewidth=1.5, color='grey', label=r'Sequential')
+plt.axhline(y=time_seq_dim[1], linestyle='--', linewidth=1.5, color='black', label=r'Sequential')
 plt.scatter(x, time_par_2[7:14], color='orange')
 plt.plot(x, time_par_2[7:14], linewidth=1.5, color='orange', label=r'Threads = 2')
 plt.scatter(x, time_par_4[7:14], color='red')
@@ -1397,7 +1397,7 @@ plt.close()
 plot_title = r"$20000 \times 4000$"
 
 fig = plt.figure(figsize=(10, 7))
-plt.axhline(y=time_seq_dim[2], linestyle='--', linewidth=1.5, color='grey', label=r'Sequential')
+plt.axhline(y=time_seq_dim[2], linestyle='--', linewidth=1.5, color='black', label=r'Sequential')
 plt.scatter(x, time_par_2[14:21], color='orange')
 plt.plot(x, time_par_2[14:21], linewidth=1.5, color='orange', label=r'Threads = 2')
 plt.scatter(x, time_par_4[14:21], color='red')
@@ -1422,7 +1422,7 @@ plt.close()
 plot_title = r"$40000 \times 1000$"
 
 fig = plt.figure(figsize=(10, 7))
-plt.axhline(y=time_seq_dim[3], linestyle='--', linewidth=1.5, color='grey', label=r'Sequential')
+plt.axhline(y=time_seq_dim[3], linestyle='--', linewidth=1.5, color='black', label=r'Sequential')
 plt.scatter(x, time_par_2[21:28], color='orange')
 plt.plot(x, time_par_2[21:28], linewidth=1.5, color='orange', label=r'Threads = 2')
 plt.scatter(x, time_par_4[21:28], color='red')
@@ -1447,7 +1447,7 @@ plt.close()
 plot_title = r"$40000 \times 4000$"
 
 fig = plt.figure(figsize=(10, 7))
-plt.axhline(y=time_seq_dim[4], linestyle='--', linewidth=1.5, color='grey', label=r'Sequential')
+plt.axhline(y=time_seq_dim[4], linestyle='--', linewidth=1.5, color='black', label=r'Sequential')
 plt.scatter(x, time_par_2[28:35], color='orange')
 plt.plot(x, time_par_2[28:35], linewidth=1.5, color='orange', label=r'Threads = 2')
 plt.scatter(x, time_par_4[28:35], color='red')
@@ -1472,7 +1472,7 @@ plt.close()
 plot_title = r"$40000 \times 10000$"
 
 fig = plt.figure(figsize=(10, 7))
-plt.axhline(y=time_seq_dim[5], linestyle='--', linewidth=1.5, color='grey', label=r'Sequential')
+plt.axhline(y=time_seq_dim[5], linestyle='--', linewidth=1.5, color='black', label=r'Sequential')
 plt.scatter(x, time_par_2[35:42], color='orange')
 plt.plot(x, time_par_2[35:42], linewidth=1.5, color='orange', label=r'Threads = 2')
 plt.scatter(x, time_par_4[35:42], color='red')
@@ -1517,7 +1517,7 @@ plt.close()
 plot_title = r"$80000 \times 1000$"
 
 fig = plt.figure(figsize=(10, 7))
-plt.axhline(y=time_seq_dim[6], linestyle='--', linewidth=1.5, color='grey', label=r'Sequential')
+plt.axhline(y=time_seq_dim[6], linestyle='--', linewidth=1.5, color='black', label=r'Sequential')
 plt.scatter(x, time_par_2[42:49], color='orange')
 plt.plot(x, time_par_2[42:49], linewidth=1.5, color='orange', label=r'Threads = 2')
 plt.scatter(x, time_par_4[42:49], color='red')
@@ -1542,7 +1542,7 @@ plt.close()
 plot_title = r"$80000 \times 4000$"
 
 fig = plt.figure(figsize=(10, 7))
-plt.axhline(y=time_seq_dim[7], linestyle='--', linewidth=1.5, color='grey', label=r'Sequential')
+plt.axhline(y=time_seq_dim[7], linestyle='--', linewidth=1.5, color='black', label=r'Sequential')
 plt.scatter(x, time_par_2[49:56], color='orange')
 plt.plot(x, time_par_2[49:56], linewidth=1.5, color='orange', label=r'Threads = 2')
 plt.scatter(x, time_par_4[49:56], color='red')
@@ -1567,7 +1567,7 @@ plt.close()
 plot_title = r"$80000 \times 10000$"
 
 fig = plt.figure(figsize=(10, 7))
-plt.axhline(y=time_seq_dim[8], linestyle='--', linewidth=1.5, color='grey', label=r'Sequential')
+plt.axhline(y=time_seq_dim[8], linestyle='--', linewidth=1.5, color='black', label=r'Sequential')
 plt.scatter(x, time_par_2[56:63], color='orange')
 plt.plot(x, time_par_2[56:63], linewidth=1.5, color='orange', label=r'Threads = 2')
 plt.scatter(x, time_par_4[56:63], color='red')
@@ -2228,7 +2228,7 @@ x = [5, 10, 50, 100, 500, 1000, 10000]
 plot_title = r"$4000 \times 1000$"
 
 fig = plt.figure(figsize=(10, 7))
-plt.axhline(y=it_seq_dim[0], linestyle='--', linewidth=1.5, color='grey', label=r'Sequential')
+plt.axhline(y=it_seq_dim[0], linestyle='--', linewidth=1.5, color='black', label=r'Sequential')
 plt.scatter(x, lines_par_2[0:7], color='orange')
 plt.plot(x, lines_par_2[0:7], linewidth=1.5, color='orange', label=r'Threads = 2')
 plt.scatter(x, lines_par_4[0:7], color='red')
@@ -2253,7 +2253,7 @@ plt.close()
 plot_title = r"$20000 \times 1000$"
 
 fig = plt.figure(figsize=(10, 7))
-plt.axhline(y=it_seq_dim[1], linestyle='--', linewidth=1.5, color='grey', label=r'Sequential')
+plt.axhline(y=it_seq_dim[1], linestyle='--', linewidth=1.5, color='black', label=r'Sequential')
 plt.scatter(x, lines_par_2[7:14], color='orange')
 plt.plot(x, lines_par_2[7:14], linewidth=1.5, color='orange', label=r'Threads = 2')
 plt.scatter(x, lines_par_4[7:14], color='red')
@@ -2278,7 +2278,7 @@ plt.close()
 plot_title = r"$20000 \times 4000$"
 
 fig = plt.figure(figsize=(10, 7))
-plt.axhline(y=it_seq_dim[2], linestyle='--', linewidth=1.5, color='grey', label=r'Sequential')
+plt.axhline(y=it_seq_dim[2], linestyle='--', linewidth=1.5, color='black', label=r'Sequential')
 plt.scatter(x, lines_par_2[14:21], color='orange')
 plt.plot(x, lines_par_2[14:21], linewidth=1.5, color='orange', label=r'Threads = 2')
 plt.scatter(x, lines_par_4[14:21], color='red')
@@ -2303,7 +2303,7 @@ plt.close()
 plot_title = r"$40000 \times 1000$"
 
 fig = plt.figure(figsize=(10, 7))
-plt.axhline(y=it_seq_dim[3], linestyle='--', linewidth=1.5, color='grey', label=r'Sequential')
+plt.axhline(y=it_seq_dim[3], linestyle='--', linewidth=1.5, color='black', label=r'Sequential')
 plt.scatter(x, lines_par_2[21:28], color='orange')
 plt.plot(x, lines_par_2[21:28], linewidth=1.5, color='orange', label=r'Threads = 2')
 plt.scatter(x, lines_par_4[21:28], color='red')
@@ -2328,7 +2328,7 @@ plt.close()
 plot_title = r"$40000 \times 4000$"
 
 fig = plt.figure(figsize=(10, 7))
-plt.axhline(y=it_seq_dim[4], linestyle='--', linewidth=1.5, color='grey', label=r'Sequential')
+plt.axhline(y=it_seq_dim[4], linestyle='--', linewidth=1.5, color='black', label=r'Sequential')
 plt.scatter(x, lines_par_2[28:35], color='orange')
 plt.plot(x, lines_par_2[28:35], linewidth=1.5, color='orange', label=r'Threads = 2')
 plt.scatter(x, lines_par_4[28:35], color='red')
@@ -2353,7 +2353,7 @@ plt.close()
 plot_title = r"$40000 \times 10000$"
 
 fig = plt.figure(figsize=(10, 7))
-plt.axhline(y=it_seq_dim[5], linestyle='--', linewidth=1.5, color='grey', label=r'Sequential')
+plt.axhline(y=it_seq_dim[5], linestyle='--', linewidth=1.5, color='black', label=r'Sequential')
 plt.scatter(x, lines_par_2[35:42], color='orange')
 plt.plot(x, lines_par_2[35:42], linewidth=1.5, color='orange', label=r'Threads = 2')
 plt.scatter(x, lines_par_4[35:42], color='red')
@@ -2398,7 +2398,7 @@ plt.close()
 plot_title = r"$80000 \times 1000$"
 
 fig = plt.figure(figsize=(10, 7))
-plt.axhline(y=it_seq_dim[6], linestyle='--', linewidth=1.5, color='grey', label=r'Sequential')
+plt.axhline(y=it_seq_dim[6], linestyle='--', linewidth=1.5, color='black', label=r'Sequential')
 plt.scatter(x, lines_par_2[42:49], color='orange')
 plt.plot(x, lines_par_2[42:49], linewidth=1.5, color='orange', label=r'Threads = 2')
 plt.scatter(x, lines_par_4[42:49], color='red')
@@ -2423,7 +2423,7 @@ plt.close()
 plot_title = r"$80000 \times 4000$"
 
 fig = plt.figure(figsize=(10, 7))
-plt.axhline(y=it_seq_dim[7], linestyle='--', linewidth=1.5, color='grey', label=r'Sequential')
+plt.axhline(y=it_seq_dim[7], linestyle='--', linewidth=1.5, color='black', label=r'Sequential')
 plt.scatter(x, lines_par_2[49:56], color='orange')
 plt.plot(x, lines_par_2[49:56], linewidth=1.5, color='orange', label=r'Threads = 2')
 plt.scatter(x, lines_par_4[49:56], color='red')
@@ -2448,7 +2448,7 @@ plt.close()
 plot_title = r"$80000 \times 10000$"
 
 fig = plt.figure(figsize=(10, 7))
-plt.axhline(y=it_seq_dim[8], linestyle='--', linewidth=1.5, color='grey', label=r'Sequential')
+plt.axhline(y=it_seq_dim[8], linestyle='--', linewidth=1.5, color='black', label=r'Sequential')
 plt.scatter(x, lines_par_2[56:63], color='orange')
 plt.plot(x, lines_par_2[56:63], linewidth=1.5, color='orange', label=r'Threads = 2')
 plt.scatter(x, lines_par_4[56:63], color='red')

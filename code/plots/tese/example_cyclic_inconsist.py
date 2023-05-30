@@ -7,6 +7,14 @@ import sys
 from skspatial.objects import Line, Point
 from skspatial.plotting import plot_2d
 
+import matplotlib.pylab as pylab
+params = {'legend.fontsize': 'x-large',
+         'axes.labelsize': 'xx-large',
+         'axes.titlesize': 'xx-large',
+         'xtick.labelsize': 'xx-large',
+         'ytick.labelsize': 'xx-large'}
+pylab.rcParams.update(params)
+
 # python3 plots/tese/example_cyclic_inconsist.py
 
 x_init = [4, 5]

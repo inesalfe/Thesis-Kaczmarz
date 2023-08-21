@@ -7,6 +7,7 @@
 #include <sstream>
 #include <random>
 #include <algorithm>
+#include <iomanip>
 using namespace std;
 
 double sqrNorm(double * vec, int size) {
@@ -45,6 +46,61 @@ double dotProductCol(double ** matrix, int col, double * vec2, int size) {
 	for (int i = 0; i < size; i++)
 		dot_p += matrix[i][col]*vec2[i];
 	return dot_p;
+}
+
+void importDenseSystemTXT(int M, int N, string A_filename, string b_filename, string x_filename, double**& A, double*& b, double*& x) {
+	
+	ifstream file_A;
+	file_A.open(A_filename);
+	if (!file_A.is_open()) {
+		cout << "Error in opening the matrix file" << endl;
+		exit(1);
+	}
+
+	double * aux;
+	aux = new double[(long)M*(long)N];
+	A = new double*[(long)M];
+	for (long i = 0; i < M; i++)
+		A[i] = &aux[i * N];
+
+	for (int i = 0; i < M; i++)
+		for (int j = 0; j < N; j++)
+			file_A >> A[i][j];
+
+	file_A.close();
+
+	ifstream file_b;
+	file_b.open(b_filename);
+	if (!file_b.is_open()) {
+		cout << "Error in opening the b vector file" << endl;
+		delete[] A[0];
+		delete[] A;
+		exit(1);
+	}
+
+	b = new double[M];
+
+	for (int i = 0; i < M; i++)
+		file_b >> b[i];
+
+	file_b.close();
+
+	ifstream file_x;
+	file_x.open(x_filename);
+	if (!file_x.is_open()) {
+		cout << "Error in opening the x vector file" << endl;
+		delete[] A[0];
+		delete[] A;
+		delete[] b;
+		exit(1);
+	}
+
+	x = new double[N];
+
+	for (int i = 0; i < N; i++)
+		file_x >> x[i];
+
+	file_x.close();
 }
 
 void importDenseSystemBIN(int M, int N, string A_filename, string b_filename, string x_filename, double**& A, double*& b, double*& x) {
@@ -2265,6 +2321,42 @@ void importxVectorBIN(int N, string x_filename, double*& x) {
 	}
 }
 
+void convertMatrixTXT(int M, int N, string A_filename) {
+
+	string input_etx = ".bin";
+	string output_etx = ".txt";
+
+	string input_name = A_filename;
+	string output_name = input_name.substr(0, input_name.length() - input_etx.length());
+
+	output_name = output_name + output_etx;
+
+	ifstream file_in(input_name, ios::binary);
+	ofstream file_out(output_name);
+	file_out << std::fixed << std::setprecision(std::numeric_limits<double>::max_digits10);
+	if (file_in.is_open() && file_out.is_open()) {
+		double num;
+		for (int i = 0; i < M; i++) {
+			for (int j = 0; j < N-1; j++) {
+				file_in.read(reinterpret_cast<char *>(&num), sizeof(num));
+				file_out << num << " ";
+			}
+			for (int j = N-1; j < N; j++) {
+				file_in.read(reinterpret_cast<char *>(&num), sizeof(num));
+				file_out << num << endl;
+			}
+		}
+		file_in.close();
+		file_out.close();
+	}	
+	else {
+		cout << "ERROR: Invalid input file for matrix." << endl;
+		exit(1);
+	}
+
+	return;	
+}
+
 void convertMatrixBIN(int M, int N, string A_filename) {
 
 	string input_etx = ".txt";
@@ -2342,6 +2434,66 @@ void convertbVectorBIN(int M, string b_filename) {
 		for (int i = 0; i < M; i++) {
 			file_in >> num;
 			file_out.write(reinterpret_cast<char*>(&num), sizeof(num));
+		}
+		file_in.close();
+		file_out.close();
+	}	
+	else {
+		cout << "ERROR: Invalid input file for b vector." << endl;
+		exit(1);
+	}
+
+	return;
+}
+
+void convertxVectorTXT(int N, string x_filename) {
+
+	string input_etx = ".bin";
+	string output_etx = ".txt";
+
+	string input_name = x_filename;
+	string output_name = input_name.substr(0, input_name.length() - input_etx.length());
+
+	output_name = output_name + output_etx;
+
+	ifstream file_in(input_name, ios::binary);
+	ofstream file_out(output_name);
+	file_out << std::fixed << std::setprecision(std::numeric_limits<double>::max_digits10);
+	if (file_in.is_open() && file_out.is_open()) {
+		double num;
+		for (int i = 0; i < N; i++) {
+			file_in.read(reinterpret_cast<char *>(&num), sizeof(num));
+			file_out << num << endl;
+		}
+		file_in.close();
+		file_out.close();
+	}	
+	else {
+		cout << "ERROR: Invalid input file for x vector." << endl;
+		exit(1);
+	}
+
+	return;
+}
+
+void convertbVectorTXT(int M, string b_filename) {
+
+	string input_etx = ".bin";
+	string output_etx = ".txt";
+
+	string input_name = b_filename;
+	string output_name = input_name.substr(0, input_name.length() - input_etx.length());
+
+	output_name = output_name + output_etx;
+
+	ifstream file_in(input_name, ios::binary);
+	ofstream file_out(output_name);
+	file_out << std::fixed << std::setprecision(std::numeric_limits<double>::max_digits10);
+	if (file_in.is_open() && file_out.is_open()) {
+		double num;
+		for (int i = 0; i < M; i++) {
+			file_in.read(reinterpret_cast<char *>(&num), sizeof(num));
+			file_out << num << endl;
 		}
 		file_in.close();
 		file_out.close();

@@ -12,6 +12,8 @@ double dotProduct(double * vec1, double * vec2, int size);
 
 double dotProductCol(double ** matrix, int col, double * vec2, int size);
 
+void importDenseSystemTXT(int M, int N, std::string A_filename, std::string b_filename, std::string x_filename, double**& A, double*& b, double*& x);
+
 void importDenseSystemBIN(int M, int N, std::string A_filename, std::string b_filename, std::string x_filename, double**& A, double*& b, double*& x);
 
 void importDenseMatrixMTX(int M, int N, std::string A_filename, double**& A);
@@ -46,11 +48,17 @@ void convertMTXtoCSR_BIN(int& M, int& N, int& NNZ, std::string filename, std::st
 
 void convertMTXtoCSC_BIN(int& M, int& N, int& NNZ, std::string filename, std::string folder_out);
 
+void convertMatrixTXT(int M, int N, std::string A_filename);
+
 void convertMatrixBIN(int M, int N, std::string A_filename);
 
 void convertxVectorBIN(int N, std::string x_filename);
 
 void convertbVectorBIN(int M, std::string b_filename);
+
+void convertxVectorTXT(int N, std::string x_filename);
+
+void convertbVectorTXT(int M, std::string b_filename);
 
 void genConsistSparseSystem(int M, int N);
 

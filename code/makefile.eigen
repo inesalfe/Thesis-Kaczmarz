@@ -1,6 +1,6 @@
-CC := g++-12
+CC := g++
 CCFLAGS := -O3 -lm -fopenmp
-INC := -I src -I /usr/local/include
+INC := -I src -I /opt/eigen
 
 .PRECIOUS : bin/%.o
 

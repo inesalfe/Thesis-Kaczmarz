@@ -4,13 +4,13 @@ INC := -I src
 
 .PRECIOUS : bin/%.o
 
-VPATH = src/:main_omp_csr/
+VPATH = src/:main_ct_csr/
 
 SRC = $(notdir $(wildcard src/*.C))
 OBJ = $(addprefix bin/, $(SRC:.C=.o))
 HHH = $(wildcard src/*.h)
 
-SRCSPROG := $(notdir $(wildcard main_omp_csr/*.C))
+SRCSPROG := $(notdir $(wildcard main_ct_csr/*.C))
 EXE := $(addprefix bin/, $(SRCSPROG:.C=.exe))
 
 all: allexe allobj

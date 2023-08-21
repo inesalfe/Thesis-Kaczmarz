@@ -1,5 +1,5 @@
-CC := g++-12
-CCFLAGS := -O3 -lm -fopenmp
+CC := g++
+CCFLAGS := -std=c++11 -O3 -lm -fopenmp
 INC := -I src
 
 .PRECIOUS : bin/%.o
